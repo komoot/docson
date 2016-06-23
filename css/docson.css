@@ -93,7 +93,14 @@
 .docson .box-description {
     color: dimgray;
     float: left;
-    max-width: 600px;
+    // max-width: 600px;
+}
+
+#doc > .box > .box-header .box-description p::after {
+  content: "* denotes optional fields.";
+  color: #0000cc;
+  font-size: 90%;
+  padding-left:10px;
 }
 
 .docson .end {
@@ -175,8 +182,16 @@
     min-width: 130px;
 }
 
+.docson .property-name:not(.required) + .signature-type::after {
+  content: " *";
+  color: #0000cc;
+  font-size: 90%;
+  padding-left:10px;
+}
+
+
 .docson .required {
-    font-weight: bold;
+  // font-weight: bold;
 }
 
 .docson .type-keyword {
@@ -204,8 +219,8 @@
 .docson .signature-type {
     padding-left: 6px;
     float: left;
-    min-width: 160px;
-    max-width: 320px;
+    min-width: 260px;
+    max-width: 500px;
 }
 
 .docson .signature-type-any {
